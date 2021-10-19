@@ -9,14 +9,21 @@ namespace ConsoleAppArreglo
     class Datos
     {
         private string nombre;
+        private string apellidos;
+        private string carrera;
 
         public string Nombre
         {
             get { return nombre; }
             set { nombre = value; }
         }
-        private string carrera;
 
+        public string Apellidos
+        {
+            get { return apellidos; }
+            set { apellidos = value; }
+        }
+ 
         public string Carrera
         {
             get { return carrera; }
@@ -25,16 +32,18 @@ namespace ConsoleAppArreglo
         public Datos()
         {
             nombre = "";
+            apellidos = "";
             carrera = "";
         }
-        public Datos(string nombre, string carrera)
+        public Datos(string nombre, string apellidos, string carrera)
         {
             this.nombre = nombre;
+            this.apellidos = apellidos;
             this.carrera = carrera;
         }
         public override string ToString()
         {
-            return " Nombre:" + nombre + "Carrera:" + carrera;
+            return nombre + " " + apellidos + " " + carrera + " ";
         }
 
     }
